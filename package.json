@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "css": "node-sass patterns.scss build/patterns.css",
-    "watch": "watch 'npm run css' **/ --wait=2 --ignoreDotFiles",
+    "watch": "watch 'npm run css' --wait=2 --ignoreDotFiles --ignoreDirectoryPattern=/build/",
     "serve": "serve -lui 'node_modules/'",
     "dev": "npm-run-all --parallel watch serve"
   },

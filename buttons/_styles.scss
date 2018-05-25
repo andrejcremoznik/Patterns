@@ -1,0 +1,52 @@
+$btn_default_tx: #333 !default;
+$btn_default_bg: #ddd !default;
+
+.btn {
+  /* BEGIN: Resets */
+  display: inline-block;
+  margin: 0;
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  line-height: normal;
+  vertical-align: middle;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  &:focus { outline: 0; }
+  /* END: Resets */
+
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: $btn_default_tx;
+  background: $btn_default_bg;
+  transition: all .15s ease;
+  &:hover,
+  &:focus {
+    color: darken($btn_default_tx, 15%);
+    background: darken($btn_default_bg, 15%);
+  }
+}
+
+.btn[disabled],
+.btn_disabled {
+  pointer-events: none;
+  opacity: .5;
+  filter: grayscale(100%);
+}
+
+.btn_l {
+  padding: 15px 30px;
+  font-size: 120%;
+}
+
+.btn_s {
+  padding: 5px 10px;
+  font-size: 80%;
+}
+
+.btn_block {
+  display: block;
+  text-align: center;
+}
