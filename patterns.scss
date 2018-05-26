@@ -1,2 +1,2 @@
-@import "forms/styles";
 @import "buttons/styles";
+@import "forms/styles"; // NOTE: "forms" depends on "buttons"

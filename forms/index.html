@@ -6,11 +6,24 @@
   <link rel="stylesheet" href="../build/patterns.css">
 </head>
 <body>
-  <div class="form__item">
-    <label class="form__label">Text input</label>
+  <p><a href="/">← Back</a></p>
+  <h1>Forms</h1>
+  <div style="max-width: 480px;">
+  <!-- BEGIN: Forms -->
+
+  <div class="form__item form__item_required">
+    <label class="form__label">Required text input</label>
+    <div class="form__field">
+      <input class="form__input form__text" type="text" name="" placeholder="Placeholder" required>
+    </div>
+  </div>
+
+  <div class="form__item form__item_error">
+    <label class="form__label">Text input after validation</label>
     <div class="form__field">
       <input class="form__input form__text" type="text" name="" placeholder="Placeholder">
     </div>
+    <div class="form__feedback">Bad input.</div>
   </div>
 
   <div class="form__item">
@@ -20,15 +33,69 @@
     </div>
   </div>
 
+  <div class="form__item form__item_error">
+    <label class="form__label">Input with prepended/appended string/label/button</label>
+    <div class="form__field form__field_group">
+      <div class="form__insert">Left</div>
+      <input class="form__input form__text" type="text" name="" placeholder="Placeholder">
+      <div class="form__insert">Right</div>
+    </div>
+    <div class="form__feedback">Some error!</div>
+  </div>
+
+  <div class="form__item">
+    <p class="form__label">Input with prepended label and appended button</p>
+    <div class="form__field form__field_group">
+      <label class="form__insert">Label</label>
+      <input class="form__input form__text" type="text" name="" placeholder="Placeholder">
+      <button class="form__insert form__btn btn btn_primary">Button</button>
+    </div>
+  </div>
+
+  <div class="form__item">
+    <label class="form__label">Number</label>
+    <div class="form__field form__field_group">
+      <input class="form__input form__number" type="number" name="" value="1" min="0" max="100" step="1">
+      <div class="form__insert">stylesheets</div>
+    </div>
+  </div>
+
   <div class="form__item">
     <label class="form__label">Select</label>
     <div class="form__field">
       <select class="form__input form__select" name="">
-        <option value="1">Opt 1</option>
-        <option value="2">Opt 2</option>
-        <option value="3">Opt 3</option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
       </select>
     </div>
+  </div>
+
+  <div class="form__item">
+    <label class="form__label">Textarea</label>
+    <div class="form__field">
+      <textarea class="form__input form__textarea" name="name" rows="4" cols="80" placeholder="Placeholder"></textarea>
+    </div>
+  </div>
+
+  <div class="form__item">
+    <p class="form__label">Toggles</p>
+    <div class="form__field">
+      <label class="form__toggle"><input type="radio" name="radio" value="1" checked> Radio 1</label>
+      <label class="form__toggle"><input type="radio" name="radio" value="2"> Radio 2</label>
+      <label class="form__toggle"><input type="radio" name="radio" value="3"> Radio 3</label>
+      <label class="form__toggle"><input type="checkbox" name="checkbox1" checked value="1"> Checkbox 1</label>
+      <label class="form__toggle"><input type="checkbox" name="checkbox2" value="2"> Checkbox 2</label>
+      <label class="form__toggle"><input type="checkbox" name="checkbox3" value="3"> Checkbox 3</label>
+    </div>
+  </div>
+
+  <div class="form__item">
+    <button class="form__btn btn btn_primary" type="button" name="button">Primary</button>
+    <button class="form__btn btn" type="button" name="button">Secondary</button>
+  </div>
+
+  <!-- END: Forms -->
   </div>
 </body>
 </html>
