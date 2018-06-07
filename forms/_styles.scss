@@ -54,12 +54,12 @@ $form_field__error: #b00 !default;
 }
 
 .form__input,
+.form__toggle { font-size: rem($form_field_font_size); }
+
+.form__input,
 .form__btn,
 .form__toggle,
-.form__insert {
-  font-size: $form_field_font_size;
-  line-height: $form_field_line_height;
-}
+.form__insert { line-height: $form_field_line_height; }
 
 .form__text,
 .form__search,
@@ -71,7 +71,6 @@ $form_field__error: #b00 !default;
 .form__btn {
   padding-top: $form_field_padding;
   padding-bottom: $form_field_padding;
-  border-radius: $form_field_radius;
 }
 
 .form__text,
@@ -100,7 +99,13 @@ $form_field__error: #b00 !default;
   &::-webkit-outer-spin-button { height: auto; }
 }
 
-.form__select { text-transform: none; }
+.form__select { text-transform: none; } // TODO: Check if this requires -webkit-appearance: none; !
+
+.form__file {
+  &::-webkit-file-upload-button {
+    -webkit-appearance: button;
+  }
+}
 
 .form__field_group {
   display: flex;
@@ -121,9 +126,11 @@ $form_field__error: #b00 !default;
   padding: $form_field_padding - $form_field_border_width;
   border-style: solid;
   border-color: $form_field_border_color;
+  white-space: nowrap;
   &:first-child { border-width: $form_field_border_width 0 $form_field_border_width $form_field_border_width; }
   &:last-child { border-width: $form_field_border_width $form_field_border_width $form_field_border_width 0; }
   &:not(.btn) { background-color: #eee; }
+  &.form__btn { border-radius: $form_field_radius; } // Only match border-radius when the button is inside a field group
 }
 .form__insert,
 .form__field_group > .form__input {

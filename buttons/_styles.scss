@@ -15,6 +15,7 @@ input.btn::-moz-focus-inner {
   vertical-align: middle;
   text-decoration: none;
   text-transform: none;
+  text-shadow: none;
   white-space: nowrap;
   cursor: pointer;
   &:focus { outline: 0; }
@@ -46,11 +47,7 @@ input.btn::-moz-focus-inner {
   opacity: .5;
 }
 
-.btn_block {
-  display: block;
-  text-align: center;
-}
-
+// Sizes
 .btn_l {
   padding: 15px 30px;
   font-size: 1.25rem;
@@ -61,6 +58,16 @@ input.btn::-moz-focus-inner {
   font-size: .75rem;
 }
 
+.btn_block {
+  display: block;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: center;
+}
+button.btn_block,
+input.btn_block { width: 100%; }
+
+// Colors
 .btn_primary {
   color: #fff;
   background: #2b62b4;
